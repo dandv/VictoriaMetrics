@@ -516,7 +516,7 @@ foo_bar 4.00 1652170560000 # 2022-05-10T08:16:00Z
 ```
 
 The data above contains a list of samples for the `foo_bar` time series with time intervals between samples
-ranging from 1m to 3m. If we plot this data sample on the graph, it will have the following form:
+ranging from 1m to 3m. If we plot this data sample on the graph, it will look like this:
 
 ![data samples](data_samples.webp)
 {width="500"}
@@ -737,7 +737,7 @@ By default, Victoria Metrics does not immediately return the recently written sa
 written prior to the time specified by the `-search.latencyOffset` command-line flag, which has a default offset of 30 seconds.
 This is true for both `query` and `query_range` and may give the impression that data is written to the VM with a 30-second delay.
 
-This flag prevents from non-consistent results due to the fact that only part of the values are scraped in the last scrape interval.
+This flag prevents inconsistent results if only part of the values were scraped during the last scrape interval.
 
 Here is an illustration of a potential problem when `-search.latencyOffset` is set to zero:
 
